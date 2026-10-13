@@ -105,3 +105,12 @@ When I scaled the deployment to 3 replicas and forcefully deleted pod `58869`, t
 
 
 ![Final test image](images/postedittest.png)
+
+
+
+## 8 . Git merge - from course updates
+
+ - **All the changes are done in the branch course-updates , so in the end i just switched to main and merged from there, the relevant screenshot is present below**
+
+
+ ![Final Merge](images/final_merge_for_git_evidence.png)
