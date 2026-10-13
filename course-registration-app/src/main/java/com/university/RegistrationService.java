@@ -10,7 +10,11 @@ public class RegistrationService {
             return false;
         }
 
-        if (course.getCurrentEnrollment() > course.getCapacity()) {
+        if (course.getCredits() < 1 || course.getCredits() > 6) {
+            return false; 
+        }
+
+        if (course.getCurrentEnrollment() >= course.getCapacity()) {
             return false;
         }
 
