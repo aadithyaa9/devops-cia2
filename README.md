@@ -114,3 +114,11 @@ When I scaled the deployment to 3 replicas and forcefully deleted pod `58869`, t
 
 
  ![Final Merge](images/final_merge_for_git_evidence.png)
+
+
+
+ ## 9 . Jenkins Build - dashboard
+
+  - **Final jenkins build dashboard via port 8080**
+
+  ![Final jenkins](images/final_jenkins.png)
