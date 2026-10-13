@@ -82,11 +82,6 @@ When I scaled the deployment to 3 replicas and forcefully deleted pod `58869`, t
 ![Pod deleted and respawned](images/kubectl_deleted_respawn.png)
 
 ## 6. Change Summary and Limitations
-
-- **Defect Correction:** The original logic evaluated `> capacity` instead of `>= capacity`. I fixed this boundary defect to correctly reject registrations when exactly 1 seat remains without state.
-
-- **Change Request (Set C):** Implemented a strict validation for a 1 to 6 credit limit.
-
 - **Modified Files:**
   - `pom.xml` (Root)
   - `course-registration-app/pom.xml` (New)
@@ -98,5 +93,15 @@ When I scaled the deployment to 3 replicas and forcefully deleted pod `58869`, t
 
 - **Known Limitations:**
   - The system currently stores all data in memory. State is lost if the application restarts. we need to have docker images for this
+  - we are doing it in a miniube , which is not industry standard
   - The Kubernetes deployment currently pulls a Nginx image rather than a Docker image of our Java application due to local registry. 
   - The jenkins build is not verified via the browser , we should need github access to send out github url aas string parameter , so that with scm polling the jenkins can access the push changes and edit accordingly
+
+
+## 7 . Acceptance Criteria - Valid course-credit range
+
+- **Edited the test cases to satisfy all the conditions:** The original test didnot have for less than 0 and greater than 7 , so i have implemented the boundary conditions and the junit focused to the given constraints .  I made those and the corresponding tests are also verified proerly after commiting all the iles , just to make sure that there are no local build.
+
+
+
+![Final test image](images/postedittest.png)
